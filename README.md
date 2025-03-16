@@ -7,17 +7,24 @@
   2024.03.09 ~ 2024.06.24
 - **개발 환경**   
   Unity 2022.3.21f
+- **설명**   
+  Unity Game Engine을 이용하여 제작한 간단한 탑뷰 솔로플레이 2D 게임입니다.
 - **프로젝트 목적**   
-  Unity Game Engine을 이용하여 간단한 탑뷰 2D 게임을 제작함으로써 게임 개발에 필요한 지식을 이해하는 것 목적으로 한다.
+  Unity Game Engine을 이용하여 간단한 탑뷰 솔로플레이 2D 게임을 제작함으로써 Unity Engine의 프레임워크를 이해하고, 2D 게임 개발의 워크플로우와 필요 기술을 습득하는 것 목적으로 한다.
 - **주요 기술 및 도구**   
-  - Framework: Unity (C#)
-  - Design Pattern : Entity-Component, SingleTone
+  - Framework
+    - Unity (C#)
+  - Design Pattern
+    - Entity-Component
+    - SingleTone
 - **멤버 구성**:
-  개발 4명
+  프로그래밍 4명
 - **기여 내용**:
-  - 역할: PlayerEntity, EnemyEntity, VirtualCameraManager, UI, PickableObjects 설계 및 작성
-  - 기여율: 25%
-
+  - PlayerEntity 설계 및 작성
+  - EnemyEntity 설계 및 작성
+  - VirtualCameraManager 설계 및 작성
+  - UI 설계 및 작성
+  - PickableObjects 설계 및 작성
 <br>
 
 ---
