@@ -25,6 +25,20 @@
   - VirtualCameraManager 설계 및 작성
   - UI 설계 및 작성
   - PickableObjects 설계 및 작성
+
+<br>
+
+---
+
+<br>
+
+## 데모
+- **플레이 방법**   
+  - Build.zip 파일을 다운로드 받고, 압축 해제합니다.   
+  - HALNENG.exe 파일을 실행합니다.   
+- **YouTube 링크**   
+  [![Project HAL Demo 영상](https://img.youtube.com/vi/RwQ4D90kwPk/0.jpg)](https://www.youtube.com/watch?v=RwQ4D90kwPk)
+  
 <br>
 
 ---
@@ -33,47 +47,48 @@
 
 ## 프로젝트 구조
 ```plaintext
+Assets/
 ├── Resources/
 │   ├── Prefabs/
 │   │   ├── UI/
 │   │   │   ├── HPBar/
 │   │   │   │   ├── BossHPBar.prefab                # 보스 몬스터의 HP Bar 프리팹
 │   │   │   │   ├── EnemyHPBarUI.prefab             # 일반 몬스터의 HP Bar 프리팹
-│   │   │   │   ├── PlayerHPBarUI.prefab            # 플레이어의 HP Bar 프리팹
+│   │   │   └── └── PlayerHPBarUI.prefab            # 플레이어의 HP Bar 프리팹
 │   │   │   ├── Inventory/
 │   │   │   │   ├── InventoryUI.prefab              # 인벤토리 UI 프리팹
-│   │   │   │   ├── SlotUI.prefab                   # 인벤토리 슬롯 UI 프리팹
+│   │   └── └── └── SlotUI.prefab                   # 인벤토리 슬롯 UI 프리팹
 │   │   ├── CoinObject.prefab                       # 맵에 드랍할 수 있는 Coin 프리팹
 │   │   ├── Dummy.prefab                            # 더미(일반 몬스터) 프리팹
 │   │   ├── HeartObject.prefab                      # 맵에 드랍할 수 있는 Heart 프리팹
 │   │   ├── GameManager.prefab                      # GameManager 프리팹
-│   │   ├── PlayerObject.prefab                     # 플레이어 객체 프리팹
+│   └── └── PlayerObject.prefab                     # 플레이어 객체 프리팹
 │   ├── ScriptableObjects/
 │   │   ├── Coin.asset                              # Item을 상속받아 구현한 Coin Item
 │   │   ├── DummyHPManager.asset                    # StatManager를 상속받아 Dummy의 Stat을 구현한 StatManager
 │   │   ├── Heart.asset                             # Item을 상속받아 구현한 Heart Item
 │   │   ├── Item.cs                                 # Item을 정의한 ScriptableObject
 │   │   ├── StatManager.asset                       # StatManager를 상속받아 플레이어의 Stat을 구현한 StatManager
-│   │   ├── StatManager.cs                          # Entity Stat을 정의한 ScriptableObject
+│   └── └── StatManager.cs                          # Entity Stat을 정의한 ScriptableObject
 ├── Scripts/
 │   ├── Entity/
 │   │   ├── Entity.cs                               # Entity의 최상위 클래스
 │   │   ├── EnemyEntity.cs                          # Entity를 상속받아 적 몬스터의 초기화, 피격 및 공격 등에 관련한 코드
-│   │   ├── PlayerEntity.cs                         # Entity를 상속받아 플레이어의 초기화, 이동, 애니메이션 재생 등에 관련한 코드
+│   └── └── PlayerEntity.cs                         # Entity를 상속받아 플레이어의 초기화, 이동, 애니메이션 재생 등에 관련한 코드
 │   ├── Manager/
 │   │   ├── GameManager.cs                          # 게임 매니저 관련 코드 (싱글톤 패턴)
-│   │   ├── VirtualCameraManager.cs                 # 가상 카메라와 관련 변수와 함수들에 관련한 코드
+│   └── └── VirtualCameraManager.cs                 # 가상 카메라와 관련 변수와 함수들에 관련한 코드
 │   ├── UI/
 │   │   ├── HPBarUI.cs                              # 플레이어의 화면에 표시되는 HP UI
 │   │   ├── InventorySlotUI.cs                      # 인벤토리 슬롯 하나에 해당하는 UI
-│   │   ├── InventoryUI.cs                          # InventorySlotUI 여러개를 모은 하나의 Inventory UI. Inventory 상 아이템의 습득, 폐기, 이동에 관련한 코드
-│   ├── PickableObjects.cs                          # 필드에 드랍할 수 있는 Item에 관련한 코드
+│   └── └── InventoryUI.cs                          # InventorySlotUI 여러개를 모은 하나의 Inventory UI. Inventory 상 아이템의 습득, 폐기, 이동에 관련한 코드
+│   └── PickableObjects.cs                          # 필드에 드랍할 수 있는 Item에 관련한 코드
 ├── SPUM/
 │   ├── Res/
 │   │   ├── Animation/
 │   │   │   ├── Clip/
-│   │   │   │   ├── *.anim                           # 캐릭터의 애니메이션 파일들
-│   │   │   ├── AnimatinoNewController.controller    # 캐릭터의 애니메이션을 상태에 따라 제어
+│   │   │   └── └── *.anim                           # 캐릭터의 애니메이션 파일들
+└── └── └── └── AnimatinoNewController.controller    # 캐릭터의 애니메이션을 상태에 따라 제어
 
 ```
 
@@ -528,13 +543,3 @@
   1. 선택한 아이템의 prefab을 불러온다.
   2. prefab의 수량을 조절하고, 월드에 스폰한다.
   3. duplicatedSlot을 삭제한다.
-
-<br>
-
----
-
-<br>
-
-## 데모
-- **YouTube 링크**:   
-  [![Project HAL Demo 영상](https://img.youtube.com/vi/RwQ4D90kwPk/0.jpg)](https://www.youtube.com/watch?v=RwQ4D90kwPk)
