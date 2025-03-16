@@ -17,7 +17,7 @@
   - Design Pattern
     - Entity-Component
     - SingleTone
-- **멤버 구성**
+- **멤버 구성**   
   프로그래밍 4명
 - **기여 내용**
   - PlayerEntity 설계 및 작성
