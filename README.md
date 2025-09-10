@@ -395,7 +395,6 @@ Assets/
 │   ├── Prefabs/
 │   │   ├── UI/
 │   │   │   ├── HPBar/
-│   │   │   │   ├── BossHPBar.prefab                # 보스 몬스터의 HP Bar 프리팹
 │   │   │   │   ├── EnemyHPBarUI.prefab             # 일반 몬스터의 HP Bar 프리팹
 │   │   │   └── └── PlayerHPBarUI.prefab            # 플레이어의 HP Bar 프리팹
 │   │   │   ├── Inventory/
@@ -425,12 +424,6 @@ Assets/
 │   │   ├── HPBarUI.cs                              # 플레이어의 화면에 표시되는 HP UI
 │   │   ├── InventorySlotUI.cs                      # 인벤토리 슬롯 하나에 해당하는 UI
 │   └── └── InventoryUI.cs                          # InventorySlotUI 여러개를 모은 하나의 Inventory UI. Inventory 상 아이템의 습득, 폐기, 이동에 관련한 코드
-│   └── PickableObjects.cs                          # 필드에 드랍할 수 있는 Item에 관련한 코드
-├── SPUM/
-│   ├── Res/
-│   │   ├── Animation/
-│   │   │   ├── Clip/
-│   │   │   └── └── *.anim                           # 캐릭터의 애니메이션 파일들
-└── └── └── └── AnimationNewController.controller    # 캐릭터의 애니메이션을 상태에 따라 제어
+└── └── PickableObjects.cs                          # 필드에 드랍할 수 있는 Item에 관련한 코드
 
 ```
